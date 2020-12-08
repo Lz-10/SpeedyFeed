@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 import torch
 from torch.utils.data import IterableDataset
-from streaming4 import StreamSampler
+from streaming_queue import StreamSampler
 from streaming import StreamSamplerTest
 import utils
 import math
