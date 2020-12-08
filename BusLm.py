@@ -239,7 +239,7 @@ class NewsEncoder(torch.nn.Module):
         if 'body' in self.args.news_attributes:
             body_vec = torch.stack(all_vectors[-self.args.body_seg_num:],dim=1)
             body_vec = torch.mean(body_vec,dim=1)
-            all_vectors = all_vectors[:self.args.body_seg_num] + (body_vec,)
+            all_vectors = all_vectors[:self.args.seg_num-self.args.body_seg_num] + (body_vec,)
 
 
         for idx, name in enumerate(self.element_encoders):
